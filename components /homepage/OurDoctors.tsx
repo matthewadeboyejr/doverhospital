@@ -2,10 +2,13 @@
 
 import Image from "next/image";
 import { FiLinkedin, FiTwitter } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const OurDoctors = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const doctors = [
     {
@@ -34,22 +37,30 @@ const OurDoctors = () => {
         <div className="absolute bottom-20 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 text-center"
+        >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4">
             Meet Our Experts
           </h2>
           <p className="text-base sm:text-lg text-white max-w-2xl mx-auto px-4">
             Leading medical professionals dedicated to excellence in healthcare
           </p>
-        </div>
+        </motion.div>
 
         {/* Doctors Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {doctors.map((doctor, index) => (
-            <div
+            <motion.div
               key={doctor.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group relative"
               onMouseEnter={() => setHoveredCard(doctor.id)}
               onMouseLeave={() => setHoveredCard(null)}
@@ -119,7 +130,7 @@ const OurDoctors = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Slide {
   id: number;
@@ -89,70 +90,115 @@ const HeroSection = () => {
 
         {/* Main Content */}
         <div className="relative z-10 space-y-4 sm:space-y-6 md:space-y-8 mt-8 sm:mt-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-blue-900 leading-tight">
-            {currentSlideData.headline}
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl">
-            {currentSlideData.description}
-          </p>
-          <div className="flex justify-center lg:justify-start pt-2 sm:pt-4">
-            <Link
-              href="/contact"
-              className="inline-block bg-linear-to-r from-blue-400 to-blue-500 text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:from-blue-500 hover:to-blue-600 transition-all duration-300 shadow-lg"
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
             >
-              {currentSlideData.buttonText}
-            </Link>
-          </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-blue-900 leading-tight">
+                {currentSlideData.headline}
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mt-4 sm:mt-6">
+                {currentSlideData.description}
+              </p>
+              <div className="flex justify-center lg:justify-start pt-2 sm:pt-4">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-linear-to-r from-blue-400 to-blue-500 text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:from-blue-500 hover:to-blue-600 transition-all duration-300 shadow-lg"
+                  >
+                    {currentSlideData.buttonText}
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
       {/* Right Image Panel */}
-      <div className="hidden lg:block w-1/2 relative bg-blue-100 min-h-screen">
-        <div className="relative w-full h-full">
-          <Image
-            src={currentSlideData.image}
-            alt={currentSlideData.headline}
-            fill
-            className="object-cover"
-            priority
-          />
+      <div className="hidden lg:block w-1/2 relative bg-blue-100 min-h-screen overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.6 }}
+            className="relative w-full h-full"
+          >
+            <Image
+              src={currentSlideData.image}
+              alt={currentSlideData.headline}
+              fill
+              className="object-cover"
+              priority
+            />
+          </motion.div>
+        </AnimatePresence>
 
-          {/* Play Button Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <button className="w-16 h-16 xl:w-20 xl:h-20 rounded-full bg-white/90 hover:bg-white transition-colors flex items-center justify-center shadow-xl group">
-              <FaPlay className="text-blue-500 text-xl xl:text-2xl ml-1 group-hover:scale-110 transition-transform" />
+        {/* Play Button Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            animate={{
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-16 h-16 xl:w-20 xl:h-20 rounded-full bg-white/90 hover:bg-white transition-colors flex items-center justify-center shadow-xl pointer-events-auto"
+          >
+            <FaPlay className="text-blue-500 text-xl xl:text-2xl ml-1" />
+          </motion.button>
+        </div>
+
+        {/* Bottom Slider Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm">
+          <div className="flex items-center justify-between px-4 xl:px-6 py-3 xl:py-4">
+            <button
+              onClick={prevSlide}
+              className="text-white hover:text-blue-400 transition-colors p-1"
+              aria-label="Previous slide"
+            >
+              <FaChevronLeft className="w-4 xl:w-5 h-4 xl:h-5" />
             </button>
-          </div>
 
-          {/* Bottom Slider Overlay */}
-          <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm">
-            <div className="flex items-center justify-between px-4 xl:px-6 py-3 xl:py-4">
-              <button
-                onClick={prevSlide}
-                className="text-white hover:text-blue-400 transition-colors p-1"
-                aria-label="Previous slide"
-              >
-                <FaChevronLeft className="w-4 xl:w-5 h-4 xl:h-5" />
-              </button>
-
-              <div className="flex-1 px-4 xl:px-6 text-center">
-                <p className="text-white text-xs xl:text-sm font-medium">
-                  {currentSlideData.tagline || "Quality Healthcare Services"}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-3 xl:gap-4">
-                <span className="text-white text-2xl xl:text-3xl font-bold">
-                  {String(currentSlide + 1).padStart(2, "0")}
-                </span>
-                <button
-                  onClick={nextSlide}
-                  className="text-white hover:text-blue-400 transition-colors p-1"
-                  aria-label="Next slide"
+            <div className="flex-1 px-4 xl:px-6 text-center">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={currentSlide}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-white text-xs xl:text-sm font-medium"
                 >
-                  <FaChevronRight className="w-4 xl:w-5 h-4 xl:h-5" />
-                </button>
-              </div>
+                  {currentSlideData.tagline || "Quality Healthcare Services"}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+
+            <div className="flex items-center gap-3 xl:gap-4">
+              <span className="text-white text-2xl xl:text-3xl font-bold">
+                {String(currentSlide + 1).padStart(2, "0")}
+              </span>
+              <button
+                onClick={nextSlide}
+                className="text-white hover:text-blue-400 transition-colors p-1"
+                aria-label="Next slide"
+              >
+                <FaChevronRight className="w-4 xl:w-5 h-4 xl:h-5" />
+              </button>
             </div>
           </div>
         </div>
