@@ -12,6 +12,7 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -177,27 +178,40 @@ const Footer = () => {
         <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
-            <p className="text-gray-500 text-sm">
-              © {currentYear} Dover Hospital. All rights reserved.
-            </p>
+            <div className="flex flex-col items-center md:items-start gap-2">
+              <p className="text-gray-500 text-sm">
+                © {currentYear} Dover Hospital. All rights reserved.
+              </p>
+              <p className="text-gray-400 text-xs">
+                Powered by{" "}
+                <a
+                  href="https://www.jubileesys.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-900 hover:text-blue-700 transition-colors font-medium"
+                >
+                  Jubilee Systems Ltd
+                </a>
+              </p>
+            </div>
 
             {/* Social Media */}
             <div className="flex items-center gap-4">
-              <Link
+              {/* <Link
                 href="#"
                 className="text-gray-400 hover:text-blue-900 transition-colors"
                 aria-label="Facebook"
               >
                 <FaFacebookF className="text-xl" />
-              </Link>
+              </Link> */}
               <Link
                 href="#"
                 className="text-gray-400 hover:text-blue-900 transition-colors"
                 aria-label="Twitter"
               >
-                <FaTwitter className="text-xl" />
+                <FaWhatsapp className=" text-xl" />
               </Link>
-              <Link
+              {/* <Link
                 href="#"
                 className="text-gray-400 hover:text-blue-900 transition-colors"
                 aria-label="Instagram"
@@ -210,7 +224,7 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn className="text-xl" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

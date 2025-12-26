@@ -4,6 +4,7 @@ import Offer from "@/components /homepage/Offer";
 import OurDoctors from "@/components /homepage/OurDoctors";
 import OverView from "@/components /homepage/OverView";
 import QuickLinks from "@/components /homepage/QuickLinks";
+import Testimonies from "@/components /homepage/Testimonies";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <OverView />
       <Offer />
       <OurDoctors />
+      <Testimonies />
     </div>
   );
 }

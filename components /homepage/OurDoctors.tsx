@@ -81,13 +81,13 @@ const OurDoctors = () => {
                   />
 
                   {/* Badge on Image */}
-                  <div className="absolute top-6 left-6 z-20">
+                  {/*  <div className="absolute top-6 left-6 z-20">
                     <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                       <span className="text-sm font-semibold text-blue-900">
                         {index === 0 ? "01" : "02"}
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content Section */}

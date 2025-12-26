@@ -3,7 +3,12 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaPlay,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Slide {
@@ -254,19 +259,20 @@ const HeroSection = () => {
 
       {/* Right Sidebar - Social Media (Desktop Only) */}
       <div className="hidden xl:flex fixed right-0 top-1/2 -translate-y-1/2 z-30">
-        <div className="flex flex-col items-center justify-center gap-10 bg-white/80 backdrop-blur-sm px-4 py-12 rounded-l-lg shadow-lg">
+        <div className="flex flex-col items-center justify-center gap-10 bg-[#23CE63] backdrop-blur-sm px-4 py-12 rounded-l-lg shadow-lg">
           <Link
             href="#"
-            className="text-gray-400 hover:text-blue-400 transition-colors text-[11px] font-semibold tracking-wider"
+            className=" flex items-center gap-2 text-white hover:text-blue-400 transition-colors text-[11px] font-semibold tracking-wider"
             style={{
               writingMode: "vertical-rl",
               textOrientation: "mixed",
               transform: "rotate(180deg)",
             }}
           >
-            TWITTER
+            <FaWhatsapp className="text-white text-xl" />
+            WHATSAPP
           </Link>
-          <Link
+          {/*   <Link
             href="#"
             className="text-gray-400 hover:text-blue-400 transition-colors text-[11px] font-semibold tracking-wider"
             style={{
@@ -276,8 +282,8 @@ const HeroSection = () => {
             }}
           >
             INSTAGRAM
-          </Link>
-          <Link
+          </Link> */}
+          {/*  <Link
             href="#"
             className="text-gray-400 hover:text-blue-400 transition-colors text-[11px] font-semibold tracking-wider"
             style={{
@@ -287,7 +293,7 @@ const HeroSection = () => {
             }}
           >
             FACEBOOK
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
