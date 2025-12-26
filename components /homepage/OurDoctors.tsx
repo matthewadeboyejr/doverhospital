@@ -14,7 +14,7 @@ const OurDoctors = () => {
     {
       id: 1,
       name: "Executive Director",
-      image: "/md.jpg",
+      image: "/md.JPG",
       description: "Consultant Orthopaedic Surgeon",
       link: "#",
       twitter: "#",
@@ -22,7 +22,7 @@ const OurDoctors = () => {
     {
       id: 2,
       name: "Medical Director",
-      image: "/ed.jpg",
+      image: "/ed.JPG",
       description: "Consultant Obsterician/Gynaecologist",
       link: "#",
       twitter: "#",

@@ -31,7 +31,7 @@ const LeadershipTeam = () => {
       role: "CONSULTANT OBSTERICIAN AND GYNAECOLOGIST.",
       tagline: "He has a passion for caring for women",
       highlight: "Consultant Obstetrician and Gynaecologist",
-      img: "/ed.jpg",
+      img: "/ed.JPG",
       accentColor: "rgba(99, 102, 241, 0.3)",
       social: {
         linkedin: "#",
@@ -49,7 +49,7 @@ const LeadershipTeam = () => {
       role: "CONSULTANT ORTHOPAEDIC SURGEON.",
       tagline: "Proficient in the operative management ",
       highlight: "Consultant Orthopaedic Surgeon",
-      img: "/md.jpg",
+      img: "/md.JPG",
       accentColor: "rgba(236, 72, 153, 0.3)",
       social: {
         linkedin: "#",

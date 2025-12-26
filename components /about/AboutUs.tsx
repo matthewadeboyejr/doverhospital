@@ -35,7 +35,7 @@ const AboutUs = () => {
         <div className="flex flex-col gap-3 sm:gap-4">
           <div className="h-[300px] sm:h-[350px] md:h-[400px] relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl">
             <Image
-              src="/about1.jpg"
+              src="/about1.JPG"
               alt="doctor-male"
               fill
               className="object-cover"
@@ -77,7 +77,7 @@ const AboutUs = () => {
           </div>
           <div className="h-[300px] sm:h-[350px] md:h-[400px] relative w-full aspect-square max-w-full overflow-hidden rounded-xl sm:rounded-2xl order-1 sm:order-2">
             <Image
-              src="/about2.jpg"
+              src="/about2.JPG"
               alt="doctor-female"
               fill
               className="object-cover"

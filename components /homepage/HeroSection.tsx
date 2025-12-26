@@ -23,7 +23,7 @@ const HeroSection = () => {
       headline: "Emerge to incredible possibilities.",
       description:
         "We are committed to maintaining a culture of moral rectitude, respect, and adherence to the law, ensuring that our officers and stakeholders can serve with confidence and security.",
-      image: "/heroimg.jpg",
+      image: "/heroimg.JPG",
       buttonText: "Make Appointment",
       tagline: "Look Better. Breathe Better. Sleep Better.",
     },
@@ -32,7 +32,7 @@ const HeroSection = () => {
       headline: "Advanced medical technology. Expert care.",
       description:
         "A step closer to your dream career in the Nigeria Police Force.",
-      image: "/heroimg1.jpg",
+      image: "/heroimg1.JPG",
       buttonText: "Make Appointment",
       tagline: "Advanced Care. Expert Team. Better Health.",
     },
@@ -41,7 +41,7 @@ const HeroSection = () => {
       headline: "Your health. Our priority. Always.",
       description:
         "Just a few clicks away from your dream career in the Nigeria Police Force.",
-      image: "/heroimg2.jpg",
+      image: "/heroimg2.JPG",
       buttonText: "Make Appointment",
       tagline: "Compassionate Care. Modern Facilities.",
     },
@@ -50,7 +50,7 @@ const HeroSection = () => {
       headline: "Trusted healthcare. Compassionate service.",
       description:
         "Trust and integrity are at the core of our operations, built on a foundation of professionalism and ethical practices that guide our interactions with all stakeholders.",
-      image: "/heroimg3.jpg",
+      image: "/heroimg3.JPG",
       buttonText: "Make Appointment",
       tagline: "Excellence in Healthcare. Always.",
     },

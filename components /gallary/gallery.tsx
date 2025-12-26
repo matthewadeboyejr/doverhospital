@@ -17,8 +17,8 @@ const Gallery = () => {
     "/about1.JPG",
     "/about2.JPG",
     "/teamimg.JPG",
-    "/ward.jpg",
-    "/pham.jpg",
+    "/ward.JPG",
+    "/pham.JPG",
   ];
 
   const openLightbox = (index: number) => {
