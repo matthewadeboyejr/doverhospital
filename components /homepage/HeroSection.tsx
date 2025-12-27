@@ -25,39 +25,38 @@ const HeroSection = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      headline: "Emerge to incredible possibilities.",
+      headline: "Trusted Medical Professionals ",
       description:
-        "We are committed to maintaining a culture of moral rectitude, respect, and adherence to the law, ensuring that our officers and stakeholders can serve with confidence and security.",
+        "Skilled consultants and staff dedicated to your well-being.",
       image: "/heroimg.JPG",
       buttonText: "Make Appointment",
-      tagline: "Look Better. Breathe Better. Sleep Better.",
+      tagline: "Advanced Care. Expert Team. Better Health.",
     },
     {
       id: 2,
-      headline: "Advanced medical technology. Expert care.",
+      headline: "Committed to Quality Healthcare",
       description:
-        "A step closer to your dream career in the Nigeria Police Force.",
+        "Our expert team ensures every patient receives the best care.",
       image: "/heroimg1.JPG",
       buttonText: "Make Appointment",
       tagline: "Advanced Care. Expert Team. Better Health.",
     },
     {
       id: 3,
-      headline: "Your health. Our priority. Always.",
-      description:
-        "Just a few clicks away from your dream career in the Nigeria Police Force.",
+      headline: "Safe & Supportive Environment",
+      description: "Clean, secure, and patient-friendly surroundings—always.",
       image: "/heroimg2.JPG",
       buttonText: "Make Appointment",
-      tagline: "Compassionate Care. Modern Facilities.",
+      tagline: "Safe & Supportive Environment",
     },
     {
       id: 4,
-      headline: "Trusted healthcare. Compassionate service.",
+      headline: "Compassionate Care. Modern Facilities.",
       description:
-        "Trust and integrity are at the core of our operations, built on a foundation of professionalism and ethical practices that guide our interactions with all stakeholders.",
+        "Our compassionate team provides personalized care with modern facilities.",
       image: "/heroimg3.JPG",
       buttonText: "Make Appointment",
-      tagline: "Excellence in Healthcare. Always.",
+      tagline: "Compassionate Care. Modern Facilities.",
     },
   ];
 

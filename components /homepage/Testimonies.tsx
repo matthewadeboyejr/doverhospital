@@ -18,26 +18,38 @@ const Testimonies = () => {
   const testimonies: Testimony[] = [
     {
       id: 1,
-      name: "Mr. Emeka Onyemenam",
-      text: "My 87-year-old father fell and suffered a cracked femur (broken hip) and was referred to Dover Hospital. From the very warm and calming welcome we received from Dr. Valentine Ogbu and Dr. Kenechukwu Oji and their team, we knew we were in the right place. The partial hip replacement surgery was successfully done. Even when we encountered issues with heel and ankle ulceration after the surgery, the doctors were always available to guide us. We hope they will still be around when we get to our 80s.",
+      name: "Mrs Aguele Ngozi",
+      text: "I am very excited to review the experience I have had with the Dover Hospital IVF Team mostly because my baby and I are in my home today after 10 years of trying for a baby.",
       rating: 5,
     },
     {
       id: 2,
-      name: "Mrs Duru P.",
-      text: "After my consultation with Dr. Oji at Dover Hospital, I felt so much relieved and I knew God would answer my prayer through him. Today, I'm proudly a mummy twins. All his team (doctors, matron, nurses, scientists) are all wonderful. Dr. Oji's humility, calmness and care for women is amazing. That's why his success rate is high. His follow-up after IVF procedures is excellent. Thank you for ensuring that many homes are not broken! God bless.",
+      name: "Mrs Aguele Ngozi",
+      text: "From our very first consultation with Dr Orji, we felt totally at ease with any questions we had answered in details. There was so much uncertain with my progress but I am so grateful for how Dr Orji gave us a possible path through the uncertainty. This made me rest assured and I made up my mind that it was worth quitting my job in the UK to embank on the journey which I now understood.",
       rating: 5,
     },
     {
       id: 3,
       name: "Mrs Aguele Ngozi",
-      text: "From our very first consultation with Dr Orji, we felt totally at ease with any questions we had answered in details. There was so much uncertain with my progress but I am so grateful for how Dr Orji gave us a possible path through the uncertainty. This made me rest assured and I made up my mind that it was worth quitting my job in the UK to embark on the journey which I now understood.",
+      text: "What was a daunting and nerve-racking journey turned out to be a successful one, thanks to the professionalism and genuine care we received alongside our prayers. . Dr Orji treated me with the incredible expertise. He’s years of experience in fertility was evident because this is the second successful IVF treatment I have had from his wealth of experience.",
       rating: 5,
     },
     {
       id: 4,
       name: "Mrs Aguele Ngozi",
-      text: "What was a daunting and nerve-racking journey turned out to be a successful one, thanks to the professionalism and genuine care we received alongside our prayers. Dr Orji treated me with incredible expertise. His years of experience in fertility was evident because this is the second successful IVF treatment I have had from his wealth of experience.",
+      text: "Having had two successful IVF treatments with Dr Orji, we knew that monitoring during IVF is key and he was on top of the motoring process and has been very forthcoming, no question of mine was a bad one. He was patient with answering all my questions and available to reach both in his office and on a call.",
+      rating: 5,
+    },
+    {
+      id: 4,
+      name: "Mr. Emeka Onyemenam",
+      text: "My dad is 87. He fell off his bed 6 months ago, and it was one week before we realised he may have suffered serious injury. Panic ensued. An x-ray revealed a cracked femur (broken hip), and we were referred to Dover Hospital. Dr. Valentine Ogbu and Dr. Kenechukwu Oji and their team gave us a very warm and calming welcome, and after very candid consultations we settled on a course of treatment. Surgery was quickly scheduled for partial hip replacement. Went brilliantly with no complications. Post-op issues with ulceration of his heel and other ankle were the only glitch, and the doctors guided us through the care for these. I just hope they are around when I get into my 80s too.",
+      rating: 5,
+    },
+    {
+      id: 4,
+      name: "Mrs Duru P.",
+      text: "From the first consultation I had with Dr Oji, I felt so much relieved and I knew deep down in me that God will answer my prayer through him. (Now proudly mummy twins). Coming to Dover Hospital, his team of doctors, matron, nurses, scientists are all wonderful. Dr Oji's humility, calmness and care for women will make you forget your pain. He doesn't compromise with any of his services, he gives the best and also follows up after IVF procedure until the results are achieved.... this is the reason why his success rate is high. Thank you for ensuring that many homes are not broken! God bles",
       rating: 5,
     },
   ];

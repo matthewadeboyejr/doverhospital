@@ -141,7 +141,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-blue-900 mt-0.5 shrink-0" />
                 <span className="text-gray-600 text-sm">
-                  8 Bouake Street, Off Sudan Street, Wuse Zone 6, FCT, Abuja
+                  8 Bouake Street, off Sudan Street, Wuse Zone 6, FCT, Abuja
                 </span>
               </li>
               <li className="flex items-center gap-3">

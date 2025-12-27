@@ -62,12 +62,12 @@ const NavBar = () => {
 
           {/* Right Side - Search and Menu */}
           <div className="flex items-center gap-4">
-            <button
+            {/* <button
               className="text-gray-700 hover:text-blue-400 transition-colors p-2"
               aria-label="Search"
             >
               <FaSearch className="w-5 h-5" />
-            </button>
+            </button> */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden text-gray-700 hover:text-blue-400 transition-colors p-2"
@@ -105,14 +105,14 @@ const NavBar = () => {
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-blue-400 rounded flex items-center justify-center">
-                      <span className="text-white text-xl font-bold">+</span>
-                    </div>
-                    <span className="text-xl font-bold text-blue-900">
-                      Dover Hospital
-                    </span>
-                  </div>
+                  <Link href="/" className="flex items-center gap-3 group">
+                    <Image
+                      src="/logo.png"
+                      alt="logo"
+                      width={100}
+                      height={100}
+                    />
+                  </Link>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="p-2 hover:bg-gray-100 rounded transition-colors"

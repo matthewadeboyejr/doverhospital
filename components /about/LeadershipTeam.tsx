@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FiLinkedin, FiTwitter, FiArrowUpRight, FiX } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface Leader {
   id: number;
@@ -90,23 +91,7 @@ const LeadershipTeam = () => {
         <div className="absolute inset-0 bg-linear-to-br from-blue-900/10 via-purple-900/10 to-pink-900/10"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/*  <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-12 sm:mb-16 lg:mb-20"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-pink-400">
-              Visionary
-            </span>{" "}
-            Leadership
-          </h2>
-          <div className="w-20 sm:w-24 h-1 bg-linear-to-r from-indigo-500 to-pink-500"></div>
-        </motion.div> */}
-
+      <div className=" mx-auto relative z-10">
         {/* Leader cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {leaders.map((leader) => (
@@ -174,9 +159,9 @@ const LeadershipTeam = () => {
                         className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
                         aria-label="LinkedIn Profile"
                       >
-                        <FiLinkedin className="w-5 h-5 text-white/80 hover:text-indigo-300" />
+                        <FaWhatsapp className="w-5 h-5 text-white/80 hover:text-indigo-300" />
                       </a>
-                      <a
+                      {/*   <a
                         href={leader.social.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -184,7 +169,7 @@ const LeadershipTeam = () => {
                         aria-label="Twitter Profile"
                       >
                         <FiTwitter className="w-5 h-5 text-white/80 hover:text-pink-300" />
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -226,7 +211,7 @@ const LeadershipTeam = () => {
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.9, y: 50 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl border border-white/10"
+                className="relative w-full max-w-7xl max-h-[90vh] overflow-y-auto rounded-2xl border border-white/10"
                 style={{
                   background: `linear-gradient(135deg, rgba(255,255,255,0.05) 0%, ${selectedLeader.accentColor} 100%)`,
                   boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
@@ -241,7 +226,7 @@ const LeadershipTeam = () => {
                 </button>
 
                 <div className="flex flex-col lg:flex-row">
-                  <div className="relative w-full lg:w-2/5 h-64 sm:h-80 lg:h-auto">
+                  <div className="relative w-full lg:w-1/2 h-64 sm:h-80 lg:h-auto">
                     <Image
                       src={selectedLeader.img}
                       alt={selectedLeader.name}
@@ -277,15 +262,15 @@ const LeadershipTeam = () => {
 
                     <div className="mt-8 sm:mt-12 flex flex-wrap gap-4">
                       <a
-                        href={selectedLeader.social.linkedin}
+                        href={`https://wa.me/2348184369904`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base text-white"
                       >
-                        <FiLinkedin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                        <span>Connect</span>
+                        <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                        <span>Message</span>
                       </a>
-                      <a
+                      {/*  <a
                         href={selectedLeader.social.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -293,7 +278,7 @@ const LeadershipTeam = () => {
                       >
                         <FiTwitter className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                         <span>Follow</span>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
