@@ -13,7 +13,7 @@ export default function Home() {
       <QuickLinks />
       <HomeServices />
       <OverView />
-      <Offer />
+      {/* <Offer /> */}
       <OurDoctors />
       <Testimonies />
     </div>
