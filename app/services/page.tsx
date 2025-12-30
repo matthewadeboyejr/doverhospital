@@ -1,13 +1,13 @@
 import Breadcrumbs from "@/components /Breadcrumbs";
 import OurServices from "@/components /services/OurServices";
 
-const Services = () => {
+const Teams = () => {
   return (
     <div className="overflow-x-hidden w-full">
-      <Breadcrumbs title="Services" />
+      <Breadcrumbs title="Teams" />
       <OurServices />
     </div>
   );
 };
 
-export default Services;
+export default Teams;
