@@ -15,6 +15,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import AboutUs from "@/components /about/AboutUs";
 import MissionVision from "@/components /about/MissionVision";
 import LeadershipTeam from "@/components /about/LeadershipTeam";
+import OurTeam from "@/components /teams/OurTeam";
 
 const About = () => {
   return (
@@ -23,6 +24,7 @@ const About = () => {
       <AboutUs />
       <MissionVision />
       <LeadershipTeam />
+      <OurTeam />
     </div>
   );
 };

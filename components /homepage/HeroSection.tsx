@@ -8,6 +8,7 @@ import {
   FaChevronRight,
   FaPlay,
   FaWhatsapp,
+  FaTimes,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -22,6 +23,7 @@ interface Slide {
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const slides: Slide[] = [
     {
       id: 1,
@@ -150,6 +152,7 @@ const HeroSection = () => {
         {/* Play Button Overlay */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <motion.button
+            onClick={() => setIsVideoModalOpen(true)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             animate={{
@@ -220,7 +223,10 @@ const HeroSection = () => {
 
         {/* Play Button Overlay - Mobile */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <button className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/90 hover:bg-white transition-colors flex items-center justify-center shadow-xl">
+          <button
+            onClick={() => setIsVideoModalOpen(true)}
+            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/90 hover:bg-white transition-colors flex items-center justify-center shadow-xl"
+          >
             <FaPlay className="text-blue-500 text-xl ml-1" />
           </button>
         </div>
@@ -255,6 +261,49 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            onClick={() => setIsVideoModalOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: "spring", duration: 0.5 }}
+              className="relative w-full max-w-4xl mx-4 bg-black rounded-lg overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVideoModalOpen(false)}
+                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center text-white transition-colors"
+                aria-label="Close video"
+              >
+                <FaTimes className="text-xl" />
+              </button>
+
+              {/* Video Player */}
+              <div className="relative w-full aspect-video">
+                <video
+                  src="/previewVideo.mp4"
+                  controls
+                  autoPlay
+                  className="w-full h-full"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Right Sidebar - Social Media (Desktop Only) */}
       <div className="hidden xl:flex fixed right-0 top-1/2 -translate-y-1/2 z-30">

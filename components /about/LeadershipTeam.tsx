@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { FiLinkedin, FiTwitter, FiArrowUpRight, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
@@ -22,6 +22,8 @@ interface Leader {
 }
 
 const LeadershipTeam = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [selectedLeader, setSelectedLeader] = useState<Leader | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -86,6 +88,14 @@ const LeadershipTeam = () => {
 
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-[#0a0a0a] overflow-x-hidden">
+      <div ref={ref} className="mb-16 text-center mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4">
+          Meet Our Experts
+        </h2>
+        <p className="text-base sm:text-lg text-white max-w-2xl mx-auto px-4">
+          Leading medical professionals dedicated to excellence in healthcare
+        </p>
+      </div>
       {/* Background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-linear-to-br from-blue-900/10 via-purple-900/10 to-pink-900/10"></div>
