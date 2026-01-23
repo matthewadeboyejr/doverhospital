@@ -151,13 +151,13 @@ const Footer = () => {
                     href="tel:+2348184369904"
                     className="text-gray-600 hover:text-blue-900 transition-colors text-sm"
                   >
-                    (+234) 08184369904
+                    +2348184369904
                   </a>
                   <a
                     href="tel:+2348134354283"
                     className="text-gray-600 hover:text-blue-900 transition-colors text-sm"
                   >
-                    (+234) 08134354283
+                    +23408134354283
                   </a>
                 </div>
               </li>

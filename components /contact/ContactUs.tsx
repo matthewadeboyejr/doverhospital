@@ -56,7 +56,7 @@ const ContactUs = () => {
     {
       icon: FaPhoneAlt,
       title: "Phone",
-      content: "+2348134354283, +234 (818 436 9904)",
+      content: "+2348134354283, +234818 436 9904",
       link: "tel:08134354283",
     },
     {
