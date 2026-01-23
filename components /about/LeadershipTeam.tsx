@@ -15,8 +15,7 @@ interface Leader {
   img: string;
   accentColor: string;
   social: {
-    linkedin: string;
-    twitter: string;
+    whatsapp: string;
   };
   fullBio: string[];
 }
@@ -37,8 +36,7 @@ const LeadershipTeam = () => {
       img: "/ed.JPG",
       accentColor: "rgba(99, 102, 241, 0.3)",
       social: {
-        linkedin: "#",
-        twitter: "#",
+        whatsapp: "https://api.whatsapp.com/send?phone=2348035871438",
       },
       fullBio: [
         "Dr Oji Kenechukwu Samuel is a co-founder and Medical Director of Dover Hospital Abuja. He is an Obstetrician/Gynaecologist a fellow of both West African College of Surgeons and National College of Gynaecologists.",
@@ -55,8 +53,8 @@ const LeadershipTeam = () => {
       img: "/md.JPG",
       accentColor: "rgba(236, 72, 153, 0.3)",
       social: {
-        linkedin: "#",
-        twitter: "#",
+      whatsapp: "https://api.whatsapp.com/send?phone=2348037987419",
+     
       },
       fullBio: [
         "Dr. Valentine Ogochukwu Ogbu is a Consultant Orthopaedic Surgeon with extensive experience in musculoskeletal disorders.",
@@ -163,7 +161,7 @@ const LeadershipTeam = () => {
 
                     <div className="flex space-x-4 mt-6 sm:mt-8">
                       <a
-                        href={leader.social.linkedin}
+                        href={leader.social.whatsapp}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
@@ -171,15 +169,7 @@ const LeadershipTeam = () => {
                       >
                         <FaWhatsapp className="w-5 h-5 text-white/80 hover:text-indigo-300" />
                       </a>
-                      {/*   <a
-                        href={leader.social.twitter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
-                        aria-label="Twitter Profile"
-                      >
-                        <FiTwitter className="w-5 h-5 text-white/80 hover:text-pink-300" />
-                      </a> */}
+                      
                     </div>
                   </div>
                 </div>

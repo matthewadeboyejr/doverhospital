@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FiLinkedin, FiTwitter } from "react-icons/fi";
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const OurDoctors = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -16,16 +17,16 @@ const OurDoctors = () => {
       name: "Executive Director",
       image: "/md.JPG",
       description: "Consultant Orthopaedic Surgeon",
-      link: "#",
-      twitter: "#",
+      whatsapp: "https://api.whatsapp.com/send?phone=2348037987419",
+     
     },
     {
       id: 2,
       name: "Medical Director",
       image: "/ed.JPG",
       description: "Consultant Obsterician/Gynaecologist",
-      link: "#",
-      twitter: "#",
+     whatsapp: "https://api.whatsapp.com/send?phone=2348035871438",
+    
     },
   ];
 
@@ -80,14 +81,7 @@ const OurDoctors = () => {
                     priority={index === 0}
                   />
 
-                  {/* Badge on Image */}
-                  {/*  <div className="absolute top-6 left-6 z-20">
-                    <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                      <span className="text-sm font-semibold text-blue-900">
-                        {index === 0 ? "01" : "02"}
-                      </span>
-                    </div>
-                  </div> */}
+                 
                 </div>
 
                 {/* Content Section */}
@@ -108,24 +102,16 @@ const OurDoctors = () => {
 
                     {/* Social Links */}
                     <div className="flex items-center gap-4 pt-2">
-                      {doctor.link && (
+                      {doctor.whatsapp && (
                         <a
-                          href={doctor.link}
-                          className="p-3 rounded-full bg-gray-100 hover:bg-blue-900 transition-all duration-300"
-                          aria-label="LinkedIn Profile"
+                          href={doctor.whatsapp}
+                          className="p-3 rounded-full bg-blue-900 hover:bg-blue-900 transition-all duration-300"
+                          aria-label="Whatsapp Profile"
                         >
-                          <FiLinkedin className="w-5 h-5 text-gray-700 hover:text-white transition-colors duration-300" />
+                         <FaWhatsapp className="w-5 h-5 text-white hover:text-indigo-300" />
                         </a>
                       )}
-                      {doctor.twitter && (
-                        <a
-                          href={doctor.twitter}
-                          className="p-3 rounded-full bg-gray-100 hover:bg-blue-500 transition-all duration-300"
-                          aria-label="Twitter Profile"
-                        >
-                          <FiTwitter className="w-5 h-5 text-gray-700 hover:text-white transition-colors duration-300" />
-                        </a>
-                      )}
+                  
                     </div>
                   </div>
                 </div>

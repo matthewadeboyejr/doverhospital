@@ -309,7 +309,7 @@ const HeroSection = () => {
       <div className="hidden xl:flex fixed right-0 top-1/2 -translate-y-1/2 z-30">
         <div className="flex flex-col items-center justify-center gap-10 bg-[#23CE63] backdrop-blur-sm px-4 py-12 rounded-l-lg shadow-lg">
           <Link
-            href="#"
+            href="https://api.whatsapp.com/send?phone=2347049663032"
             className=" flex items-center gap-2 text-white hover:text-blue-400 transition-colors text-[11px] font-semibold tracking-wider"
             style={{
               writingMode: "vertical-rl",

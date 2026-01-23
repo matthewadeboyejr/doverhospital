@@ -51,13 +51,13 @@ const ContactUs = () => {
     {
       icon: FaMapMarkerAlt,
       title: "Address",
-      content: "38, Agadez Crescent, Wuse II, FCT-Abuja, Nigeria",
+      content: "No. 8, Bouake Street, Off Sudan Street, Wuse Zone 6, FCT - Abuja.",
     },
     {
       icon: FaPhoneAlt,
       title: "Phone",
-      content: "+234 (8147692468)",
-      link: "tel:+2348147692468",
+      content: "+2348134354283, +234 (818 436 9904)",
+      link: "tel:08134354283",
     },
     {
       icon: FaEnvelope,
