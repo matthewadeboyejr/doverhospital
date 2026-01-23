@@ -262,7 +262,7 @@ const LeadershipTeam = () => {
 
                     <div className="mt-8 sm:mt-12 flex flex-wrap gap-4">
                       <a
-                        href={`https://wa.me/2348184369904`}
+                        href={selectedLeader.social.whatsapp}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base text-white"
